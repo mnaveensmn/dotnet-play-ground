@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using webapi_play_ground.Exceptions;
@@ -7,13 +8,21 @@ namespace webapi_play_ground.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PatchController
+public class PatchController : ControllerBase
 {
     [HttpPatch(Name = "Patch Demo")]
     public Employee Get(JsonPatchDocument employeePatch)
     {
         var employee = createEmployee();
         employeePatch.ApplyTo(employee);
+        return employee;
+    }
+    
+    
+    [HttpPost(Name = "Json Ignore Demo")]
+    public Employee Post([FromBody] Employee employee)
+    {
+        Console.WriteLine($"Employee Salary {employee.salary}");
         return employee;
     }
 
@@ -32,8 +41,17 @@ public class PatchController
 }
 
 /*
-Request Body:
+ Request Body for Post
+ {
+  "id": "ss",
+  "name":"ss",
+  "age": 10,
+  "salary": "100"
+}
 
+ */
+/*
+Request Body for Patch
 [
     {
         "path": "/name",
