@@ -17,8 +17,7 @@ public class PatchController : ControllerBase
         employeePatch.ApplyTo(employee);
         return employee;
     }
-    
-    
+
     [HttpPost(Name = "Json Ignore Demo")]
     public Employee Post([FromBody] Employee employee)
     {

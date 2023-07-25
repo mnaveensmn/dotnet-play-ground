@@ -14,7 +14,6 @@ public class ExceptionController
     [HttpPatch(Name = "Global Exception Handler Demo")]
     public string Get()
     {
-        _service.show();
-        return "Test";
+        return _service.show();
     }
 }
