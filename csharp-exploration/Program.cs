@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using csharp_exploration.Basics;
+
 Console.WriteLine("Hello, World!");
+
+await Hello.GetPageLengthAsync("https://www.google.com");
