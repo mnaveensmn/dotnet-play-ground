@@ -9,16 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dynamo-db-exploration", "dy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-exploration", "csharp-exploration\csharp-exploration.csproj", "{00F2E106-085D-40B2-8BEB-DB2326C38748}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data-extractor", "data-extractor\data-extractor.csproj", "{FF173577-FD2B-4DA7-8DEA-C74CF4677038}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C3ED452-0948-4D8D-8464-784E8264F8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C3ED452-0948-4D8D-8464-784E8264F8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C3ED452-0948-4D8D-8464-784E8264F8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C3ED452-0948-4D8D-8464-784E8264F8E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{07251D27-0819-4D52-B40A-ADBB5216D3FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{07251D27-0819-4D52-B40A-ADBB5216D3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07251D27-0819-4D52-B40A-ADBB5216D3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,6 +29,10 @@ Global
 		{00F2E106-085D-40B2-8BEB-DB2326C38748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00F2E106-085D-40B2-8BEB-DB2326C38748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00F2E106-085D-40B2-8BEB-DB2326C38748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF173577-FD2B-4DA7-8DEA-C74CF4677038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF173577-FD2B-4DA7-8DEA-C74CF4677038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF173577-FD2B-4DA7-8DEA-C74CF4677038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF173577-FD2B-4DA7-8DEA-C74CF4677038}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
