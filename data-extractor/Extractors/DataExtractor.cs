@@ -9,7 +9,7 @@ public class DataExtractor
 {
     public void Extract()
     {
-        string fileloc = @"../data-extractor/Files";
+        string fileloc = @"../data-extractor/ConfidentialFiles";
         string scenarioPattern = @"^build	[0-9]{2}-[a-zA-Z]{3}-[0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}	[0-9]{1,3}\) Scenario: ";
         string failedStepPattern = @"^build	[0-9]{2}-[a-zA-Z]{3}-[0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}	\s*✖ ";
         Regex scenarioRegEx = new(scenarioPattern);
