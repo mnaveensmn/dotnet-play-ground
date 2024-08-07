@@ -18,6 +18,10 @@
 // BooleanExpression booleanExpression = new BooleanExpression();
 // booleanExpression.Execute();
 
-new ConditionalOperator();
+//new ConditionalOperator();
 
-new CoinFlip();
+//new CoinFlip();
+
+//new RoleBasedPermission();
+
+new CodeBlockVariableScope();

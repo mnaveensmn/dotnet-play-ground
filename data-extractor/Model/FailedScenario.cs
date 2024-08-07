@@ -6,6 +6,8 @@ public class FailedScenario
 
     public string Step { get; set; }
 
+    public string FileName { get; set; }
+
     public List<string> BuildNumbers { get; set; }
 
     public override bool Equals(object obj)
@@ -17,7 +19,8 @@ public class FailedScenario
     {
         return other != null &&
                Scenario == other.Scenario &&
-               Step == other.Step;
+               Step == other.Step &&
+               FileName == other.FileName;
     }
 
     public override int GetHashCode()
