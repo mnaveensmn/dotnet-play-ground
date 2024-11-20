@@ -1,15 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
+#
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-play-ground", "webapi-play-ground\webapi-play-ground.csproj", "{07251D27-0819-4D52-B40A-ADBB5216D3FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-play-ground", "src\webapi-play-ground\webapi-play-ground.csproj", "{07251D27-0819-4D52-B40A-ADBB5216D3FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dynamo-db-exploration", "dynamo-db-exploration\dynamo-db-exploration.csproj", "{D2B4DFE1-25BC-4FE7-8E50-5D740522E52C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dynamo-db-exploration", "src\dynamo-db-exploration\dynamo-db-exploration.csproj", "{D2B4DFE1-25BC-4FE7-8E50-5D740522E52C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data-extractor", "data-extractor\data-extractor.csproj", "{FF173577-FD2B-4DA7-8DEA-C74CF4677038}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data-extractor", "src\data-extractor\data-extractor.csproj", "{FF173577-FD2B-4DA7-8DEA-C74CF4677038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-foundation", "csharp-foundation\csharp-foundation.csproj", "{A5262A74-D933-4DD0-9C0F-EC9909C932B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-foundation", "src\csharp-foundation\csharp-foundation.csproj", "{A5262A74-D933-4DD0-9C0F-EC9909C932B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C0076889-47EE-43F6-89FF-A40ED98E5C38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi-play-ground-test", "test\webapi-play-ground-test\webapi-play-ground-test.csproj", "{F177F878-6365-4C2D-BDE0-2748FFAC4B29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6E8F5CAA-38CB-4367-8657-E14AED02B548}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +39,19 @@ Global
 		{A5262A74-D933-4DD0-9C0F-EC9909C932B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5262A74-D933-4DD0-9C0F-EC9909C932B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5262A74-D933-4DD0-9C0F-EC9909C932B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F177F878-6365-4C2D-BDE0-2748FFAC4B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F177F878-6365-4C2D-BDE0-2748FFAC4B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F177F878-6365-4C2D-BDE0-2748FFAC4B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F177F878-6365-4C2D-BDE0-2748FFAC4B29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F177F878-6365-4C2D-BDE0-2748FFAC4B29} = {C0076889-47EE-43F6-89FF-A40ED98E5C38}
+		{A5262A74-D933-4DD0-9C0F-EC9909C932B8} = {6E8F5CAA-38CB-4367-8657-E14AED02B548}
+		{FF173577-FD2B-4DA7-8DEA-C74CF4677038} = {6E8F5CAA-38CB-4367-8657-E14AED02B548}
+		{D2B4DFE1-25BC-4FE7-8E50-5D740522E52C} = {6E8F5CAA-38CB-4367-8657-E14AED02B548}
+		{07251D27-0819-4D52-B40A-ADBB5216D3FE} = {6E8F5CAA-38CB-4367-8657-E14AED02B548}
 	EndGlobalSection
 EndGlobal

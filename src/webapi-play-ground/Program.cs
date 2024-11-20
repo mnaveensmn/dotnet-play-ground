@@ -8,6 +8,9 @@ builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IService, Service>();
+builder.Services.AddTransient<IBookService, BookService>();
+builder.Services.AddSingleton(TimeProvider.System);
+
 
 var app = builder.Build();
 
