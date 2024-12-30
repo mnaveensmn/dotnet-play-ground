@@ -16,7 +16,7 @@ public class BookService(TimeProvider timeProvider) : IBookService
                 Title = $"Book Title {i}",
                 BookType = $"Book Type {i % 3}",
                 CreatedAt = timeProvider.GetUtcNow().UtcDateTime.AddHours(1),
-                UpdatedAt = DateTime.UtcNow
+                UpdatedAt = DateTime.UtcNow.AddHours(1)
             });
         }
 

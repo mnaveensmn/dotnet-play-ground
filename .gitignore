@@ -34,3 +34,7 @@
 **/.vs/
 
 **/Confidential*/**
+
+**/.DS_Store
+
+.DS_Store

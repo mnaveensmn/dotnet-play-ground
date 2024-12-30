@@ -16,8 +16,10 @@ public class ExceptionHandlerMiddleware
     public async Task Invoke(HttpContext context)    
     {    
         try    
-        {    
+        {
+            Console.WriteLine("ExceptionHandlerMiddleware: Before Invoke");
             await _next.Invoke(context);    
+            Console.WriteLine("ExceptionHandlerMiddleware: After Invoke");
         }
         catch (Exception ex)    
         {    

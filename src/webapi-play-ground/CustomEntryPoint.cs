@@ -1,6 +1,6 @@
 namespace webapi_play_ground;
 
-public class Program
+public class CustomEntryPoint
 {
     public static void Main(string[] args)
     {

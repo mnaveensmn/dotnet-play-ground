@@ -18,6 +18,7 @@ namespace webapi_play_ground.Controllers
         [HttpGet]
         public OkObjectResult GetBooks()
         {
+            Console.WriteLine("BookController: Request Received");
             return Ok(bookService.GetAllBooks());
         }
     }

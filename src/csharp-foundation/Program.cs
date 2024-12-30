@@ -25,4 +25,8 @@
 //new RoleBasedPermission();
 
 
-new CodeBlockVariableScope();
+//new CodeBlockVariableScope();
+
+var timeProvider = TimeProvider.System;
+var expirtyTime = timeProvider.GetUtcNow().AddHours(1).DateTime;
+Console.WriteLine(DateTime.UtcNow.ToString());

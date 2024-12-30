@@ -18,8 +18,8 @@ public class BookServiceTest
     public void ShouldReturnAllBooks()
     {
         var createdAt = DateTime.UtcNow;
-        var createdAtOffset = DateTime.SpecifyKind(createdAt, DateTimeKind.Utc);
-        _fakeTimeProvider.SetUtcNow(createdAtOffset);
+        _fakeTimeProvider.SetUtcNow(createdAt);
+        
         var result = _bookService.GetAllBooks();
 
         var book = result.First();
