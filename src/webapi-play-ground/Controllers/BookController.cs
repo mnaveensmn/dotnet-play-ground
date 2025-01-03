@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using webapi_play_ground.Filters;
 using webapi_play_ground.Models;
 using webapi_play_ground.Services;
 
 namespace webapi_play_ground.Controllers
 {
     [ApiController]
+    [ServiceFilter<TestAsyncActionFilterOne>]
     [Route("api/[controller]")]
     public class BookController(IBookService bookService) : ControllerBase
     {

@@ -1,17 +1,31 @@
-namespace webapi_play_ground;
+using webapi_play_ground.Extensions;
+using webapi_play_ground.Filters;
+using webapi_play_ground.Services;
 
-public class Program
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<TestAsyncActionFilterOne>();
+builder.Services.AddControllers(options =>
 {
-    public static void Main(string[] args)
-    {
-        Console.WriteLine("Executed from CustomEntryPoint");
-        CreateHostBuilder(args).Build().Run();
-    }
+    options.Filters.Add(typeof(TestAsyncActionFilterTwo));
+}).AddNewtonsoftJson();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<IService, Service>();
+builder.Services.AddTransient<IBookService, BookService>();
+builder.Services.AddSingleton(TimeProvider.System);
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<Startup>();
-            });
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+app.UseCustomMiddleware();
+app.UseRouting();
+app.UseAuthorization();
+app.MapControllers();
+
+app.Run();

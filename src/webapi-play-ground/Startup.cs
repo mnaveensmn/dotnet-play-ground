@@ -16,7 +16,8 @@ public class Startup(IConfiguration configuration)
         services.AddTransient<IService, Service>();
         services.AddTransient<IBookService, BookService>();
         services.AddSingleton(TimeProvider.System);
-        //services.AddMvcCore(options => options.Filters.Add(typeof(TestAsyncActionFilter)));
+        services.AddMvcCore(options => options.Filters.Add(typeof(TestAsyncActionFilterOne)));
+        services.AddMvcCore();
     }
 
     public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
