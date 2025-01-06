@@ -1,0 +1,61 @@
+{
+  "consumer": {
+    "name": "ApiClient"
+  },
+  "interactions": [
+    {
+      "description": "A valid request for all books",
+      "providerStates": [
+        {
+          "name": "books exist"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/v1/books"
+      },
+      "response": {
+        "body": [
+          {
+            "author": "Author1",
+            "id": "1",
+            "name": "Book1"
+          },
+          {
+            "author": "Author2",
+            "id": "2",
+            "name": "Book2"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.4.23",
+      "models": "1.2.5"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "BookApi"
+  }
+}
