@@ -10,16 +10,16 @@ public class BooksService : IBooksService
         [
             new Book()
             {
-                Id = "Id1",
+                Id = "1",
                 Name = "Book1",
-                Author = "Book1 Author"
+                Author = "Author1"
             },
 
             new Book()
             {
-                Id = "Id2",
+                Id = "2",
                 Name = "Book2",
-                Author = "Book2 Author"
+                Author = "Author2"
             }
         ];
     }
