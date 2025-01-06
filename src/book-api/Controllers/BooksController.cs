@@ -5,7 +5,7 @@ namespace book_api.Controllers;
 
 [ApiController]
 [Route("v1/books")]
-public class BooksController(IBooksService booksService) : ControllerBase
+public class BooksController(IBooksService booksService) : Controller
 {
     [HttpGet]
     public IActionResult GetBooks()
