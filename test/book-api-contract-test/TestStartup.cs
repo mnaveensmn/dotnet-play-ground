@@ -1,11 +1,6 @@
-using book_api.Controllers;
 using book_api.Models;
 using book_api.Services;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Moq;
 
 namespace book_api_contract_test;
 

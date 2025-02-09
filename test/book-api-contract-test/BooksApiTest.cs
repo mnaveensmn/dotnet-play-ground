@@ -1,6 +1,5 @@
 using book_api_contract_test.Helpers;
 using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
 using PactNet.Infrastructure.Outputters;
 using PactNet.Verifier;
 using Xunit.Abstractions;

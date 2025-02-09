@@ -1,32 +1,46 @@
-﻿using csharp_foundation.Excercise;
+﻿
+using csharp_foundation;
 
-// MaxNumber maxNumber = new();
-// maxNumber.Execute();
-
-// DiceGame diceGame = new();
-// diceGame.Play();
-
-// var SubscriptionRenewal = new SubscriptionRenewal();
-// SubscriptionRenewal.Notify();
-
-// var fraudulentOrder = new FraudulentOrder();
-// fraudulentOrder.Find();
-
-// var warehouseInventory = new WarehouseInventory();
-// warehouseInventory.Validate();
-
-// BooleanExpression booleanExpression = new BooleanExpression();
-// booleanExpression.Execute();
-
-//new ConditionalOperator();
-
-//new CoinFlip();
-
-//new RoleBasedPermission();
+//new EnumExploration().Run();
 
 
-//new CodeBlockVariableScope();
+var map = new Dictionary<string, ITestInterface>
+{
+    ["a"] = new Class1(),
+    ["b"] = new Class2()
+};
 
-var timeProvider = TimeProvider.System;
-var expirtyTime = timeProvider.GetUtcNow().AddHours(1).DateTime;
-Console.WriteLine(DateTime.UtcNow.ToString());
+map["a"].Run();
+
+interface ITestInterface
+{
+    void Run();
+}
+
+class Class1 : ITestInterface
+{
+    public Class1()
+    {
+        Console.WriteLine("Class 1");
+    }
+    
+    public void Run()
+    {
+        Console.WriteLine("Run Class 1");
+    }
+}
+
+class Class2 : ITestInterface
+{
+    public Class2()
+    {
+        Console.WriteLine("Class 2");
+    }
+    
+    public void Run()
+    {
+        Console.WriteLine("Run Class 2");
+    }
+}
+
+
