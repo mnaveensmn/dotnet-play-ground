@@ -37,4 +37,8 @@
 
 **/.DS_Store
 
+**/tools/**
+
+**/output/**
+
 .DS_Store

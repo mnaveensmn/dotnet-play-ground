@@ -11,6 +11,9 @@ builder.Services.AddControllers(options =>
 }).AddNewtonsoftJson();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<ITestService1, TestService1>();
+builder.Services.AddScoped<ITestService2, TestService2>();
+builder.Services.AddSingleton<ITestService3, TestService3>();
 builder.Services.AddTransient<IService, Service>();
 builder.Services.AddTransient<IBookService, BookService>();
 builder.Services.AddSingleton(TimeProvider.System);

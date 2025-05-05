@@ -7,5 +7,5 @@ public static class Constant
     public const string ColumnTwo = "ColumnTwo";
     public const string HashKey = "hashKey";
     public const string RangeKey = "rangeKey";
-    public const string TableNamePrefix = "TableNamePrefix";
+    public const string TableNamePrefix = "perf";
 }

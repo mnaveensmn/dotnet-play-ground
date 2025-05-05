@@ -13,6 +13,11 @@ public class Startup(IConfiguration configuration)
         services.AddControllers().AddNewtonsoftJson();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
+        
+        services.AddTransient<ITestService1, TestService1>();
+        services.AddScoped<ITestService2, TestService2>();
+        services.AddSingleton<ITestService3, TestService3>();
+        
         services.AddTransient<IService, Service>();
         services.AddTransient<IBookService, BookService>();
         services.AddSingleton(TimeProvider.System);
