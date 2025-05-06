@@ -4,22 +4,15 @@ public class SwitchExploration : IExcercise
 {
     public void Run()
     {
-        int employeeLevel = 100;
-        string title = "";
-        
-        switch (employeeLevel)
+        var employeeLevel = 22;
+
+        var title = employeeLevel switch
         {
-            case 100:
-                title = "Level1";
-                break;
-            case 200:
-                title = "Level 2";
-                break;
-            default:
-                title = "Default";
-                break;
-        }
-        
+            100 => "Level1",
+            200 => "Level 2",
+            _ => "Default"
+        };
+
         Console.WriteLine(title);
     }
 }
