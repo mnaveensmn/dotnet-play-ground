@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>dynamo_db_load_testing</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.400.4" />
+        <PackageReference Include="ReedExpo.Digital.Http" Version="8.0.0" />
+        <PackageReference Include="ReedExpo.Digital.Http.Extensions" Version="8.0.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <None Update="Feeds\ShortCodes.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Feeds\Exhibitors.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+</Project>
