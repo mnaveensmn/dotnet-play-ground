@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "algolia-exploration-v2", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dynamo-db-load-testing", "src\dynamo-db-load-testing\dynamo-db-load-testing.csproj", "{01A29054-1026-4003-9D22-C1079AF73AC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nlog-exploration", "src\nlog-exploration\nlog-exploration.csproj", "{28E45443-B404-4B01-9E67-D5558BBB88EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{01A29054-1026-4003-9D22-C1079AF73AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01A29054-1026-4003-9D22-C1079AF73AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01A29054-1026-4003-9D22-C1079AF73AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E45443-B404-4B01-9E67-D5558BBB88EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E45443-B404-4B01-9E67-D5558BBB88EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E45443-B404-4B01-9E67-D5558BBB88EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E45443-B404-4B01-9E67-D5558BBB88EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,5 +115,6 @@ Global
 		{E4456DAF-EA4A-4D74-A476-E04D909E72F7} = {6E8F5CAA-38CB-4367-8657-E14AED02B548}
 		{2C6EC8FF-CDA7-45BA-B4EE-C1E33D0C30C4} = {6E8F5CAA-38CB-4367-8657-E14AED02B548}
 		{01A29054-1026-4003-9D22-C1079AF73AC6} = {6E8F5CAA-38CB-4367-8657-E14AED02B548}
+		{28E45443-B404-4B01-9E67-D5558BBB88EF} = {6E8F5CAA-38CB-4367-8657-E14AED02B548}
 	EndGlobalSection
 EndGlobal
