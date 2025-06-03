@@ -42,7 +42,3 @@
 **/output/**
 
 **/.DS_Store/**
-
-**/dynamo-db-load-testing/Feeds/**
-**/dynamo-db-load-testing/Entities/**
-**/dynamo-db-load-testing/Shared/Constants.cs

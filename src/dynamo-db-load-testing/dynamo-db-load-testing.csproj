@@ -15,10 +15,7 @@
     </ItemGroup>
     
     <ItemGroup>
-      <None Update="Feeds\ShortCodes.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-      <None Update="Feeds\Exhibitors.json">
+      <None Update="Feeds\SomeFeeds.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

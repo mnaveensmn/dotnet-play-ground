@@ -17,18 +17,18 @@ public class LoadTest(string threadNo) : BaseLoadTest
             TableNamePrefix = $"perf-",
         });
 
-    private CircularList<ExhibitorFeed> exhibitors = GetExhibitorsFeed();
+    private CircularList<SomeFeed> exhibitors = GetExhibitorsFeed();
 
     public override async Task TestCallBack()
     {
         var error = "";
-        var exhibitorId = exhibitors.GetNext().exhibitorId;
+        var exhibitorId = exhibitors.GetNext().someId;
         var stopWatch = new Stopwatch();
         stopWatch.Start();
         try
         {
-            await QueryAsync<ExhibitorItem>(exhibitorId, QueryOperator.BeginsWith,
-                new List<string> { Constants.ExhibitorIdentifier });
+            await QueryAsync<SomeItem>(exhibitorId, QueryOperator.BeginsWith,
+                new List<string> { Constants.SomeIdentifier });
         }
         catch (Exception e)
         {
@@ -42,29 +42,29 @@ public class LoadTest(string threadNo) : BaseLoadTest
         Console.WriteLine(logMsg);
     }
 
-    private static CircularList<ExhibitorFeed> GetExhibitorsFeed()
+    private static CircularList<SomeFeed> GetExhibitorsFeed()
     {
-        var filePath = "Feeds/Exhibitors.json";
+        var filePath = "Feeds/SomeFeeds.json";
 
-        var exhibitors = new FeedsReader<ExhibitorFeed>().Read(filePath);
+        var exhibitors = new FeedsReader<SomeFeed>().Read(filePath);
 
-        return new CircularList<ExhibitorFeed>(exhibitors);
+        return new CircularList<SomeFeed>(exhibitors);
     }
 
     public async Task TestQueryAsyncMethod()
     {
-        var exhibitorId = exhibitors.GetNext().exhibitorId;
+        var exhibitorId = exhibitors.GetNext().someId;
 
         var stopWatch = new Stopwatch();
         stopWatch.Start();
-        var resultFromQueryAsync = await QueryAsync<ExhibitorItem>(exhibitorId, QueryOperator.BeginsWith,
-            new List<string> { Constants.ExhibitorIdentifier });
+        var resultFromQueryAsync = await QueryAsync<SomeItem>(exhibitorId, QueryOperator.BeginsWith,
+            new List<string> { Constants.SomeIdentifier });
         stopWatch.Stop();
         var QueryAsyncElapsed = stopWatch.ElapsedMilliseconds;
         
         stopWatch.Restart();
-        var resultFromQueryAsyncWithLoop = await QueryAsyncWithLoop<ExhibitorItem>(exhibitorId, QueryOperator.BeginsWith,
-            new List<string> { Constants.ExhibitorIdentifier });
+        var resultFromQueryAsyncWithLoop = await QueryAsyncWithLoop<SomeItem>(exhibitorId, QueryOperator.BeginsWith,
+            new List<string> { Constants.SomeIdentifier });
         stopWatch.Stop();
         Console.WriteLine($"{QueryAsyncElapsed},{stopWatch.ElapsedMilliseconds}");
         //Console.WriteLine($"QueryAsync: {QueryAsyncElapsed}, Items Fetched: {resultFromQueryAsync.Count}\tQueryAsyncWithLoop: {stopWatch.ElapsedMilliseconds}, Items Fetched: {resultFromQueryAsyncWithLoop.Count}");
