@@ -1,0 +1,12 @@
+{
+  "manifestVersion": 1,
+  "deployments": {
+    "function": [
+      {
+        "name": "aws-lambda-function",
+        "handler": "aws-lambda-function::aws_lambda_function.Function::FunctionHandler",
+        "runtime": "dotnet8"
+      }
+    ]
+  }
+}
